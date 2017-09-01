@@ -76,11 +76,15 @@ let g:prettier#config#single_quote = 'true'
 " print spaces between brackets
 let g:prettier#config#bracket_spacing = 'true'
 " put > on the last line instead of new line
-let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 " none|es5|all
-let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#trailing_comma = 'es5'
 " flow|babylon|typescript|postcss
 let g:prettier#config#parser = 'typescript'
+" Format on save
+let g:prettier#quickfix_enbabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.ts,*.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
 
 
 let g:Tex_DefaultTargetFormat = 'pdf'
@@ -160,7 +164,6 @@ au FileType cpp setl sw=4 sts=4 et
 au FileType S setl sw=8 sts=8 et
 au FileType java setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
-set tabstop=2 shiftwidth=2 expandtab "Global indents
 
 " Apply vimrc changes without restarting Vim
 augroup myvimrc
@@ -171,3 +174,5 @@ augroup END
 " Automatically format Elm code
 let g:elm_format_autosave = 1
 
+" Automatically resize vim when window is resized
+autocmd VimResized * wincmd =
