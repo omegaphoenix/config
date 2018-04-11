@@ -44,6 +44,7 @@ Plugin 'Quramy/tsuquyomi'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'leafo/moonscript-vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'alx741/vim-hindent'
 
 call vundle#end()
 filetype plugin indent on
@@ -53,6 +54,8 @@ filetype plugin indent on
 au BufRead,BufNewFile *.json.ejs set filetype=json
 au BufRead,BufNewFile *.ctmpl set filetype=gotexttmpl
 au BufRead,BufNewFile *.dockerfile set filetype=dockerfile
+
+let g:hindent_on_save = 1
 
 let g:syntastic_mode_map = { 'passive_filetypes': ['coffee'] }
 let g:syntastic_javascript_checkers = ['eslint']
