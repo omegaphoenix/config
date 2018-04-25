@@ -19,7 +19,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -145,7 +145,12 @@ nnoremap tn :tabnext<CR>
 set laststatus=2
 
 " Autofix whitespace
-:autocmd BufWritePost * :FixWhitespace
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_space=1
+let g:strip_whitelines_at_eof=1
+" highlight whitespace in markdown files, though stripping remains disabled by the blacklist
+let b:better_whitespace_enabled=1
+:autocmd FileType markdown EnableWhitespace
 
 highlight SignColumn ctermbg=none
 
