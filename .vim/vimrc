@@ -46,6 +46,39 @@ Bundle 'leafo/moonscript-vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'alx741/vim-hindent'
 
+" Writing
+Plugin 'reedes/vim-pencil' " Super-powered writing things
+Plugin 'tpope/vim-abolish' " Fancy abbreviation replacements
+Plugin 'junegunn/limelight.vim' " Highlights only active paragraph
+Plugin 'junegunn/goyo.vim' " Full screen writing mode
+Plugin 'reedes/vim-lexical' " Better spellcheck mappings
+Plugin 'reedes/vim-litecorrect' " Better autocorrections
+Plugin 'reedes/vim-textobj-sentence' " Treat sentences as text objects
+Plugin 'reedes/vim-wordy' " Weasel words and passive voice
+
+
+augroup pencil
+ autocmd!
+ autocmd filetype markdown,mkd call pencil#init()
+     \ | call lexical#init()
+     \ | call litecorrect#init()
+     \ | setl spell spl=en_us fdl=4 noru nonu nornu
+     \ | setl fdo+=search
+augroup END
+
+" http://www.naperwrimo.org/wiki/index.php?title=Vim_for_Writers
+" Pencil / Writing Controls {{{
+  let g:pencil#wrapModeDefault = 'soft'
+  let g:pencil#textwidth = 74
+  let g:pencil#joinspaces = 0
+  let g:pencil#cursorwrap = 1
+  let g:pencil#conceallevel = 3
+  let g:pencil#concealcursor = 'c'
+  let g:pencil#softDetectSample = 20
+  let g:pencil#softDetectThreshold = 130
+" }}}
+
+
 call vundle#end()
 filetype plugin indent on
 """ End Vundle
