@@ -19,7 +19,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'ntpeters/vim-better-whitespace' " Broken
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -183,7 +183,7 @@ let g:strip_whitespace_on_space=1
 let g:strip_whitelines_at_eof=1
 " highlight whitespace in markdown files, though stripping remains disabled by the blacklist
 let b:better_whitespace_enabled=1
-:autocmd FileType markdown EnableWhitespace
+" :autocmd FileType markdown EnableWhitespace " Broken plugin
 
 highlight SignColumn ctermbg=none
 
@@ -217,3 +217,6 @@ let g:elm_format_autosave = 1
 
 " Automatically resize vim when window is resized
 autocmd VimResized * wincmd =
+
+" fzf for fuzzy search
+set rtp+=/usr/local/opt/fzf
