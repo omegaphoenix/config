@@ -7,3 +7,4 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
 * `prefix` + <kbd>I</kbd> to install tmux plugins
 * `prefix` + <kbd>r</kbd> to reload tmux 
 * Install vim plugins `:PluginInstall`
+* Install ohmyzsh `https://ohmyz.sh/`
