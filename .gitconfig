@@ -1,0 +1,27 @@
+[credential]
+	helper = cache --timeout=36000
+[user]
+	name = Justin Leong
+	email = justinleong16@gmail.com
+[credential "https://git.2nd.io"]
+  username = justinleong
+  helper = store
+[push]
+	default = current
+[core]
+	excludesfile = /Users/justinleong/.gitignore_global
+	editor = /usr/bin/vim
+[url "https://"]
+	insteadOf = git://
+[url "git@git.2nd.io:"]
+  insteadOf = ssh://git@git.2nd.io/
+[github]
+	user = omegaphoenix
+[diff]
+  tool = vimdiff
+[commit]
+	gpgsign = false
+[gpg]
+	program = gpg
+[rerere]
+	enabled = 1

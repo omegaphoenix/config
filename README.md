@@ -15,3 +15,8 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
 * Install zsh theme
   `https://github.com/romkatv/powerlevel10k`
   `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k`
+
+* Install tig
+  Might need to install ncurses `sudo apt install libncurses5-dev libncursesw5-dev`
+  `https://github.com/jonas/tig`
+
