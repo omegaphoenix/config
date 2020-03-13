@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/justinleong/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -128,4 +128,9 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 # Use ssh-agent (TODO - temporary fix for RUST package resolution)
 eval `ssh-agent -s`
 ssh-add
+
+# Add config command
+function config {
+  /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+}
 
