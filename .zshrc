@@ -77,6 +77,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export EDITOR='vim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -129,20 +130,18 @@ function config {
   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
-export NODE_PATH=/usr/local/nvm/versions/node/v12.18.0/lib/node_modules
-export NPM_PATH=/usr/local/nvm/versions/node/v12.18.0/bin
-export PATH=$NPM_PATH:$PATH
-export PATH=/usr/local/cargo/bin:$PATH
-export PATH=/home/dev/bin:$PATH
-export TOOLCHAIN=nightly-2020-05-07
-export PATH=/home/dev/.local/bin:$PATH
-export CARGO_NET_GIT_FETCH_WITH_CLI=true
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$HOME/.NDK/arm/bin
+# export PATH=$PATH:$HOME/.NDK/arm64/bin
+export PATH=$PATH:$HOME/.NDK/x86/bin
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH=$PATH:/Users/$USER/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/
+# export PATH=$PATH:/Users/justinleong/workspace/github/rust-analyzer/target/release/
 
-# NVM
-export NVM_DIR=/usr/local/nvm
-\. "$NVM_DIR/nvm.sh" # This loads nvm
-
-
-# CUDA Rust
-export CUDACXX=/usr/local/cuda/bin/nvcc
-export PATH=$PATH:/usr/local/cuda/bin
+# Fix bash completion https://github.com/eddiezane/lunchy/issues/57
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
