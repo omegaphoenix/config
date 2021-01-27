@@ -25,3 +25,5 @@
 	program = gpg
 [rerere]
 	enabled = 1
+[pull]
+	rebase = true

@@ -69,7 +69,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bash_profile
 
 # User configuration
 
@@ -125,12 +124,25 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
 
-# Use ssh-agent (TODO - temporary fix for RUST package resolution)
-eval `ssh-agent -s`
-ssh-add
-
 # Add config command
 function config {
   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 
+export NODE_PATH=/usr/local/nvm/versions/node/v12.18.0/lib/node_modules
+export NPM_PATH=/usr/local/nvm/versions/node/v12.18.0/bin
+export PATH=$NPM_PATH:$PATH
+export PATH=/usr/local/cargo/bin:$PATH
+export PATH=/home/dev/bin:$PATH
+export TOOLCHAIN=nightly-2020-05-07
+export PATH=/home/dev/.local/bin:$PATH
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+
+# NVM
+export NVM_DIR=/usr/local/nvm
+\. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# CUDA Rust
+export CUDACXX=/usr/local/cuda/bin/nvcc
+export PATH=$PATH:/usr/local/cuda/bin
