@@ -66,6 +66,13 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 plugins=(
   git
   battery
+  zsh-autosuggestions
+  web-search
+  copydir
+  copyfile
+  copybuffer
+  dirhistory
+  osx
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,6 +136,20 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 function config {
   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
+
+# Start ssh-agent
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> .ssh/ssh-agent
+   fi
+   eval `cat .ssh/ssh-agent`
+fi
+
+# Need to run this to make keys available for use on the Remote Docker machine
+ssh-add
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
