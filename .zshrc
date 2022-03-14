@@ -68,11 +68,10 @@ plugins=(
   battery
   zsh-autosuggestions
   web-search
-  copydir
+  copypath
   copyfile
   copybuffer
   dirhistory
-  osx
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -166,3 +165,5 @@ export PATH=$PATH:/Users/$USER/Library/Android/sdk/ndk-bundle/toolchains/llvm/pr
 # Fix bash completion https://github.com/eddiezane/lunchy/issues/57
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
+
+alias vi='vim'
