@@ -167,3 +167,32 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 alias vi='vim'
+
+export NODE_PATH=/usr/local/nvm/versions/node/v12.18.0/lib/node_modules
+export NPM_PATH=/usr/local/nvm/versions/node/v12.18.0/bin
+export PATH=$NPM_PATH:$PATH
+export PATH=/usr/local/cargo/bin:$PATH
+export PATH=/home/dev/bin:$PATH
+export TOOLCHAIN=nightly-2020-05-07
+export PATH=/home/dev/.local/bin:$PATH
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+
+# NVM
+export NVM_DIR=/usr/local/nvm
+\. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# CUDA Rust
+export CUDACXX=/usr/local/cuda/bin/nvcc
+export PATH=$PATH:/usr/local/cuda/bin
+
+# CMake fix
+export PATH="/opt/venv/bin:$PATH"
+export VIRTUAL_ENV="/opt/venv"
+export PATH="/home/dev/.ssi/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
