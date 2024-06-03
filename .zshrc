@@ -167,3 +167,24 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 alias vi='vim'
+
+########################################################################
+# Coder Setup
+export TOOLCHAIN="nightly-2023-11-01"
+export RUSTUP_HOME="$HOME/.rustup"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PATH="/opt/venv/bin:$PATH"
+export VIRTUAL_ENV="/opt/venv"
+export NVM_DIR=$HOME/.nvm
+. $NVM_DIR/nvm.sh
+export CUDACXX="/usr/local/cuda/bin/nvcc"
+export PATH="/usr/local/cuda/bin:$PATH"
+export LIBRARY_PATH="/usr/local/cuda/lib64/stubs:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/local/lib/libtorch/lib:$LD_LIBRARY_PATH"
+export LIBTORCH="/usr/local/lib/libtorch"
+export LIBTORCH_BYPASS_VERSION_CHECK=1
+source /usr/local/vulkan-sdk/setup-env.sh
+########################################################################
