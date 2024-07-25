@@ -1,0 +1,34 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  // NERDTree-like navigation
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // Change ctrl+h to navigation
+  {
+    "key": "ctrl+h",
+    "command": "-deleteLeft",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  // Change ctrl+l to navigation
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusNextGroup"
+  },
+  // Change ctrl+n to go to explorer tab
+  {
+    "key": "ctrl+n",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "enter",
+    "command": "-rust-analyzer.onEnter",
+    "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
+  }
+]

@@ -1,5 +1,5 @@
 [credential]
-	helper = cache --timeout=36000
+	helper = store
 [user]
 	name = Justin Leong
 	email = justinleong16@gmail.com
