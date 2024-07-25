@@ -1,0 +1,140 @@
+{
+  // Vim
+  "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
+  "vim.textwidth": 110,
+  "vim.searchHighlightColor": "rgba(0, 0, 255, 0.8)",
+  "vim.insertModeKeyBindings": [
+    {
+      "after": ["<Esc>"],
+      "before": ["j", "j"]
+    }
+  ],
+  "vim.easymotion": true,
+  // "vim.normalModeKeyBindingsNonRecursive": [{
+  //   "before": ["<leader>", "s"],
+  //   "commands": ["vscode-easymotion.jumpToWord"]
+  // }]
+
+  // Editor
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.cursorStyle": "line",
+  "editor.fontFamily": "Hack Nerd Font",
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.insertSpaces": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "off",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.suggestSelection": "first",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/bin/zsh"
+    }
+  },
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.classpath": true,
+    "**/node_modules/": true,
+    "**/.factorypath": true
+  },
+
+  // Rust
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.cargo.extraEnv": {
+    "PYO3_CROSS_PYTHON_VERSION": "3.10"
+  },
+  "rust-analyzer.cargo.target": null,
+  "rust-analyzer.check.command": "check",
+  "rust-analyzer.diagnostics.disabled": ["missing-unsafe"],
+  "rust-analyzer.procMacro.enable": false,
+
+  // JS/TS
+  "terminal.integrated.fontFamily": "monospace",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.trailingComma": "all",
+  "prettier.printWidth": 110,
+  "prettier.singleQuote": true,
+
+  // Python
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.venvPath": "~/.cache/pypoetry/virtualenvs",
+
+  // Elm
+  "[elm]": {
+    "editor.formatOnSave": true
+  },
+
+  // Dart
+  "[dart]": {
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+    "editor.selectionHighlight": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80]
+  },
+
+  // HTML
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+
+  // Remote
+  "liveshare.featureSet": "insiders",
+  "remote.SSH.remotePlatform": {
+    "coder-vscode--justinleong--babyj-flex-usw2": "linux",
+    "coder-vscode--justinleong--4gpu-eu-west-1a": "linux"
+  },
+  "remote.SSH.connectTimeout": 1800,
+  "remote.SSH.showLoginTerminal": true,
+
+  "launch": {},
+  "git.openRepositoryInParentFolders": "never",
+  "window.zoomLevel": -1,
+}
