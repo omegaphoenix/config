@@ -7,6 +7,7 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
 * Install tmux
   - `sudo apt install tmux`
   - `sudo pacman -S tmux`
+  - `brew install tmux`
 
 * Install tmux plugins `https://github.com/tmux-plugins/tpm`
   * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
@@ -30,4 +31,6 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
 * Install tig
   Might need to install ncurses `sudo apt install libncurses5-dev libncursesw5-dev`
   `https://github.com/jonas/tig`
-
+  - `sudo apt install tig`
+  - `sudo pacman -S tig`
+  - `brew install tig`
