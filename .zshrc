@@ -188,3 +188,4 @@ export LIBTORCH="/usr/local/lib/libtorch"
 export LIBTORCH_BYPASS_VERSION_CHECK=1
 source /usr/local/vulkan-sdk/setup-env.sh
 ########################################################################
+eval "$(/Users/justinleong/.local/bin/mise activate zsh)"
