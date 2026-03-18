@@ -7,6 +7,7 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
 * Install tmux
   - `sudo apt install tmux`
   - `sudo pacman -S tmux`
+  - `sudo dnf -S tmux`
   - `brew install tmux`
 
 * Install tmux plugins `https://github.com/tmux-plugins/tpm`
@@ -15,10 +16,12 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
   * `prefix` + <kbd>r</kbd> to reload tmux
 
 * Install vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+* Install vim if missing `sudo dnf install vim-enhanced`
 * Install vim plugins `:PluginInstall`
 
 * Install zsh
   - `sudo apt install zsh`
+  - `sudo dnf install zsh`
   - `sudo pacman -S zsh`
 * Install ohmyzsh `https://ohmyz.sh/`
   `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -32,5 +35,6 @@ https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare
   Might need to install ncurses `sudo apt install libncurses5-dev libncursesw5-dev`
   `https://github.com/jonas/tig`
   - `sudo apt install tig`
+  - `sudo dnf install tig`
   - `sudo pacman -S tig`
   - `brew install tig`
