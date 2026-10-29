@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 git clone --bare git@github.com:omegaphoenix/config.git $HOME/.cfg
 
 function config {
